@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { urlFor } from "../lib/client";
 
-const Product = ({ product: { image, name, slug, price, chef } }) => {
+const Product = ({ product: { image, name, slug, price, direction } }) => {
   return (
     <div>
       <Link href={`/product/${slug.current}`}>
@@ -14,7 +14,14 @@ const Product = ({ product: { image, name, slug, price, chef } }) => {
             height={250}
             className="product-image"
           />
-          <img src={urlFor(image && image[1])} alt="Avatar" className="avatar" />
+          <img
+            src={urlFor(image && image[1])}
+            alt="Avatar"
+            className="avatar"
+          />
+          <div className="price-avatar-container">
+            <p className="price-avatar">${price}</p>
+          </div>
           {/* <span className="chef-avatar">0</span> */}
           <div
             style={{
@@ -24,7 +31,7 @@ const Product = ({ product: { image, name, slug, price, chef } }) => {
             }}
           >
             <p className="product-name">{name}</p>
-            <p className="product-price">${price}</p>
+            <p className="product-direction">{direction}</p>
           </div>
         </div>
       </Link>
