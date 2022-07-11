@@ -20,22 +20,53 @@ const FooterBanner = ({
     <div className="footer-banner-container">
       <div className="banner-desc">
         <div className="left">
-          <p>{discount}</p>
+          <p
+            style={{
+              fontSize: "large",
+              textShadow: "1px 1px 5px black, black 1px 1px 5px",
+              fontWeight: "600",
+            }}
+          >
+            {discount}
+          </p>
           <h3>{largeText2}</h3>
-          <p>{saleTime}</p>
+          <p
+            style={{
+              fontSize: "large",
+              textShadow: "1px 1px 5px black, black 1px 1px 5px",
+              fontWeight: "600",
+            }}
+          >
+            {saleTime}
+          </p>
         </div>
         <div className="right">
-          <p>{smallText2}</p>
+          <p
+            style={{
+              fontSize: "large",
+              textShadow: "1px 1px 5px black, black 1px 1px 5px",
+              fontWeight: "600",
+            }}
+          >
+            {/* {smallText2} */}
+          </p>
           <h3>{midText2}</h3>
-          <p>{desc}</p>
+          <p
+            style={{
+              fontSize: "large",
+              textShadow: "1px 1px 5px black, black 1px 1px 5px",
+              fontWeight: "600",
+            }}
+          >
+            {desc}
+          </p>
           {/* <Link href="#">
             <button type="button">{buttonText}</button>
           </Link> */}
         </div>
 
-        {/* <img 
-          src={urlFor(image)} className="footer-banner-image"
-        /> */}
+        <img src={urlFor(image && image[0])} className="footer-banner-image" />
+        <img src={urlFor(image && image[1])} className="footer-banner-image-two" />
       </div>
     </div>
   );
