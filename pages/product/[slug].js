@@ -5,21 +5,25 @@ import {
   // AiFillStar,
   // AiOutlineStar,
 } from "react-icons/ai";
+import { MdLocationOn } from 'react-icons/md'
+import { GiCook } from 'react-icons/gi'
+import { MdMenuBook } from 'react-icons/md'
+import { RiCompassDiscoverFill } from 'react-icons/ri'
 
 import { client, urlFor } from "../../lib/client";
-import { Product } from "../../components";
+import { Product, Slider } from "../../components";
 import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products }) => {
-  const { image, name, details, price, chef } = product;
+  const { image, name, details, price, chef, location, direction } = product;
   const [index, setIndex] = useState(0);
-    const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
-    const handleBuyNow = () => {
-      onAdd(product, qty);
+  const handleBuyNow = () => {
+    onAdd(product, qty);
 
-      setShowCart(true);
-    };
+    setShowCart(true);
+  };
 
   return (
     <div>
@@ -32,10 +36,7 @@ const ProductDetails = ({ product, products }) => {
             />
           </div>
           <div className="small-images-container">
-          <img
-              src={urlFor(image && image[1])}
-              className="small-image"
-            />
+            <img src={urlFor(image && image[1])} className="small-image" />
             {/* {image?.map((item, i) => (
               <img
                 key={i}
@@ -51,18 +52,22 @@ const ProductDetails = ({ product, products }) => {
 
         <div className="product-detail-desc">
           <h1>{name}</h1>
-          <div className="reviews">
-            <div>
-              {chef}
-            </div>
-            <p>{/* <AiFillStar />
+          <div className="chef-name">
+            <p><GiCook />   {chef}</p>
+            <p>
+              {/* <AiFillStar />
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
-              <AiOutlineStar /> */}</p>
+              <AiOutlineStar /> */}
+            </p>
           </div>
-          <h4>Details: </h4>
-          <p>{details}</p>
+          {/* <h4><MdLocationOn/></h4> */}
+          <p><RiCompassDiscoverFill />   {direction}</p>
+          <p><MdLocationOn/>   {location}</p>
+
+          {/* <h4>Details: </h4> */}
+          <p><MdMenuBook />   {details}</p>
           <p className="price">${price}</p>
           <div className="quantity">
             <h3>Quantity:</h3>
@@ -84,11 +89,7 @@ const ProductDetails = ({ product, products }) => {
             >
               Add to Cart
             </button>
-            <button
-              type="button"
-              className="buy-now"
-             onClick={handleBuyNow}
-            >
+            <button type="button" className="buy-now" onClick={handleBuyNow}>
               Buy Now
             </button>
           </div>
@@ -96,7 +97,8 @@ const ProductDetails = ({ product, products }) => {
       </div>
 
       <div className="maylike-products-wrapper">
-        <h2>You may also wanna try one of these 🤤</h2>
+        <h2>Other Meals You May Like</h2>
+        {/* <Slider /> */}
         <div className="marquee">
           <div className="maylike-products-container track">
             {products.map((item) => (
