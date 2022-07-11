@@ -8,7 +8,8 @@ import {
 } from "react-icons/ai";
 // import { IoIosArrowForward} from 'react-icons/io'
 import { TiDeleteOutline } from "react-icons/ti";
-import { BsDot } from 'react-icons/bs'
+import { IoTrashSharp } from 'react-icons/io5'
+import { BsDot } from "react-icons/bs";
 import toast from "react-hot-toast";
 
 import { useStateContext } from "../context/StateContext";
@@ -57,13 +58,11 @@ const Cart = () => {
           <AiOutlineLeft />
           <span className="heading">Cart</span>
           <span className="cart-num-items">({totalQuantities} items)</span>
-          <span className="total">subtotal ... ${totalPrice}</span>
-
+          <span className="total">subtotal ... ${totalPrice}</span>{" "}
         </button>
-        
+
         {cartItems.length < 1 && (
           <div className="empty-cart">
-            {/* <AiOutlineShopping size={150} /> */}
             <img
               src="https://clipart.world/wp-content/uploads/2021/07/Shopping-Cart-clipart-transparent-1.png"
               height={150}
@@ -124,7 +123,9 @@ const Cart = () => {
                       className="remove-item"
                       onClick={() => onRemove(item)}
                     >
-                      <TiDeleteOutline />
+                      {/* <TiDeleteOutline
+                       /> */}
+                       <IoTrashSharp />
                     </button>
                   </div>
                 </div>
@@ -139,7 +140,7 @@ const Cart = () => {
             </div> */}
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>
-                Checkout
+                Ready to Eat
               </button>
             </div>
           </div>
