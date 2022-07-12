@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer-container">
       <p>
         {" © "}
-        {new Date().getFullYear()}{"  WhoGotPlates🍽️. "}
+        {new Date().getFullYear()}{"  WhoGotPlates🍽️ "}
       </p>
       {/* <p className="icons">
         <AiFillInstagram />
