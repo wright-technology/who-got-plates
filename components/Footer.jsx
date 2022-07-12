@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <p>
-        {" Copyright © "}
-        {new Date().getFullYear()}{" "}
-        WhoGotPlates🍽️. All Rights Reserved 📃. 
+        {" © "}
+        {new Date().getFullYear()}{"  WhoGotPlates🍽️. "}
+        All Rights Reserved 📃. 
       </p>
       {/* <p className="icons">
         <AiFillInstagram />
