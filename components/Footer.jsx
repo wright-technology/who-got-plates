@@ -7,7 +7,7 @@ const Footer = () => {
       <p>
         {" Copyright © "}
         {new Date().getFullYear()}{" "}
-        Wright Corporation 
+        WhoGotPlates🍽️. All Rights Reserved 📃. 
       </p>
       {/* <p className="icons">
         <AiFillInstagram />
