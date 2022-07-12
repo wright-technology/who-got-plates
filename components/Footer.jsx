@@ -7,7 +7,6 @@ const Footer = () => {
       <p>
         {" © "}
         {new Date().getFullYear()}{"  WhoGotPlates🍽️. "}
-        All Rights Reserved 📃. 
       </p>
       {/* <p className="icons">
         <AiFillInstagram />
