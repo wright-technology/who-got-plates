@@ -5,10 +5,10 @@ import {
   // AiFillStar,
   // AiOutlineStar,
 } from "react-icons/ai";
-import { MdLocationOn } from 'react-icons/md'
-import { GiCook } from 'react-icons/gi'
-import { MdMenuBook } from 'react-icons/md'
-import { RiCompassDiscoverFill } from 'react-icons/ri'
+import { MdLocationOn } from "react-icons/md";
+import { GiCook } from "react-icons/gi";
+import { MdMenuBook } from "react-icons/md";
+import { RiCompassDiscoverFill } from "react-icons/ri";
 
 import { client, urlFor } from "../../lib/client";
 import { Product, Slider } from "../../components";
@@ -53,7 +53,9 @@ const ProductDetails = ({ product, products }) => {
         <div className="product-detail-desc">
           <h1>{name}</h1>
           <div className="chef-name">
-            <p><GiCook />   {chef}</p>
+            <p>
+              <GiCook /> {chef}
+            </p>
             <p>
               {/* <AiFillStar />
               <AiFillStar />
@@ -63,12 +65,20 @@ const ProductDetails = ({ product, products }) => {
             </p>
           </div>
           {/* <h4><MdLocationOn/></h4> */}
-          <p><RiCompassDiscoverFill />   {direction}</p>
-          <p><MdLocationOn/>   {location}</p>
+          <p>
+            <RiCompassDiscoverFill /> {direction}
+          </p>
+          <p>
+            <MdLocationOn /> {location}
+          </p>
 
           {/* <h4>Details: </h4> */}
-          <p><MdMenuBook />   {details}</p>
-          <p className="price">${price}</p>
+          <p>
+            <MdMenuBook /> {details}
+          </p>
+          <div className="price-div">
+            <p className="price">${price}</p>
+          </div>
           <div className="quantity">
             <h3>Quantity:</h3>
             <p className="quantity-desc">
