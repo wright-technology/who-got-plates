@@ -48,7 +48,7 @@ const FooterBanner = ({
               fontWeight: "600",
             }}
           >
-            {/* {smallText2} */}
+            {smallText2}
           </p>
           <h3>{midText2}</h3>
           <p
