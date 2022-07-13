@@ -140,6 +140,27 @@ span.text-red {
   border-radius: 50%;
   border: #f5f5f5 solid 3px;
 }
+.price-div {
+  margin-top: 30px;
+  color: white;
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+  border-radius: 10%;
+  border: #f5f5f5 solid 3px;
+  background-color: #63d471;
+  background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+}
+
+.price-div .price {
+  position: relative;
+  top: 13%;
+  left: -3%;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: large;
+}
 
 .price-avatar-container {
   position: absolute;
@@ -637,21 +658,22 @@ span.text-red {
   color: #324d67;
   margin-top: 0px;
 }
-.product-detail-desc .price {
+/* .product-detail-desc .price {
+  width: 60px;
+  height: 60px;
+  border-radius: 10%;
   font-weight: 700;
   font-size: 25px;
   margin-top: 30px;
   color: black;
   padding: 7px;
-  width: 25%;
   text-align: center;
-  border-radius: 10px;
   box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
     rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
   background-color: #63d471;
   background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
   color: white;
-}
+} */
 .price .old-price,
 .product-price .old-price,
 .price .old-price {
