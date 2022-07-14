@@ -7,7 +7,7 @@ import {
 } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
 import { GiCook } from "react-icons/gi";
-import { MdMenuBook } from "react-icons/md";
+import { MdMenuBook, MdVerified } from "react-icons/md";
 import { RiCompassDiscoverFill } from "react-icons/ri";
 
 import { client, urlFor } from "../../lib/client";
@@ -54,7 +54,7 @@ const ProductDetails = ({ product, products }) => {
           <h1>{name}</h1>
           <div className="chef-name">
             <p>
-              <GiCook /> {chef}
+              <GiCook /> {chef} <MdVerified style={{color: '#1da1f2'}} />
             </p>
             <p>
               {/* <AiFillStar />
