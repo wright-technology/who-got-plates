@@ -11,7 +11,7 @@ import { MdMenuBook, MdVerified } from "react-icons/md";
 import { RiCompassDiscoverFill } from "react-icons/ri";
 
 import { client, urlFor } from "../../lib/client";
-import { Product, Slider } from "../../components";
+import { Product } from "../../components";
 import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products }) => {
